@@ -14,7 +14,22 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  result = []
+  
+  result << true if a == b
+  result << true if a == c
+  result << true if b == c
+  
+  case result.size
+  when 0
+    :scalene
+  when 1
+    :isosceles
+  when 3
+    :equilateral
+  end
+
+
 end
 
 # Error class used in part 2.  No need to change this code.
